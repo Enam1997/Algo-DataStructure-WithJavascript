@@ -12,12 +12,30 @@
 
     <form action="JavaScript:fibonacchi()">
       <label>Fibonacchi Numeber</label>
-      <input type="number" name="number" id="fivInput"/>
-      <input type="submit" value="Calculate Fibonacchi">
+      <input type="number" name="number" id="fivInput" />
+      <input type="submit" value="Calculate Fibonacchi" />
+    </form>
+
+    <h5>Calculate Factorial</h5>
+
+    <form action="JavaScript:factorial()">
+      <label>Factorial of a Numeber</label>
+      <input type="number" name="number" id="facInput" />
+      <input type="submit" value="Calculate Factorial" />
+    </form>
+
+    <h5>Prime Number Check</h5>
+
+    <form action="JavaScript:isPrime()">
+      <label>Check prime</label>
+      <input type="number" name="number" id="primeInput" />
+      <input type="submit" value="Check" />
     </form>
 
     <p id="output"></p>
 
     <script src="./fibonacchi.js"></script>
+    <script src="./factorial.js"></script>
+    <script src="./prime.js"></script>
   </body>
 </html>
