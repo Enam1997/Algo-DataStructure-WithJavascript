@@ -12,3 +12,17 @@ function fibonacchi () {
 // Time Complexity Big-O for this Algorithom is O(n) because there is one loop and loop depend on the user input n
 
 
+function recursiveFibonacchi(inputdata){
+    // var inputdata = document.getElementById("recursibeFibonacchiInput").value;
+    // output = document.getElementById("output");
+
+    if(inputdata<2){
+        return output.innerHTML = inputdata;
+    }
+    return  output.innerHTML = recursiveFibonacchi(inputdata-1)+ recursiveFibonacchi(inputdata-2);
+} 
+
+console.log(recursiveFibonacchi(0));
+console.log(recursiveFibonacchi(1));
+console.log(recursiveFibonacchi(6));
+
