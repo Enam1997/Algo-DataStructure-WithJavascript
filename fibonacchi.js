@@ -1,28 +1,43 @@
+var  output = document.getElementById("output");
+
+const btn = document.getElementById("recursiveFibonacchisubmit");
+btn.addEventListener("click", callRecursiveFibonacchi);
+
+function callRecursiveFibonacchi(){
+    let input = document.getElementById("recursibeFibonacchiInput").value;
+    const revalue =recursiveFibonacchi(input)
+    output.innerHTML= revalue;
+}
+
+function recursiveFibonacchi(data){   
+    if(data<2){
+        console.log("From check condition");
+        return  data;  
+    }
+    console.log("From below condition");
+    return recursiveFibonacchi(data-1)+ recursiveFibonacchi(data-2);
+} 
+
+// Complexity O(2^n)
+
+
+// end  recursive
 
 function fibonacchi () {
-    var inputdata = document.getElementById("fivInput").value;
+    let inputdata = document.getElementById("fivInput").value;
     const fib = [0,1];
-    for(let i = 2 ; i < inputdata ; i++){
+    for(let i = 2 ; i <= inputdata ; i++){
         fib[i] = fib[i-1] + fib[i-2];
     }
-    document.getElementById("output").innerHTML = fib;
+    return output.innerHTML = fib;
 
 }
 
 // Time Complexity Big-O for this Algorithom is O(n) because there is one loop and loop depend on the user input n
 
 
-function recursiveFibonacchi(inputdata){
-    // var inputdata = document.getElementById("recursibeFibonacchiInput").value;
-    // output = document.getElementById("output");
 
-    if(inputdata<2){
-        return output.innerHTML = inputdata;
-    }
-    return  output.innerHTML = recursiveFibonacchi(inputdata-1)+ recursiveFibonacchi(inputdata-2);
-} 
 
-console.log(recursiveFibonacchi(0));
-console.log(recursiveFibonacchi(1));
-console.log(recursiveFibonacchi(6));
+
+
 
